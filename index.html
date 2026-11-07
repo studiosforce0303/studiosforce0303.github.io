@@ -1,0 +1,448 @@
+<!doctype html>
+<html lang="ja">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#f6f6f3">
+  <meta name="description" content="岡山市北区の音楽スタジオ STUDIO S-FORCE。リハーサル、レコーディング、機材レンタル、楽器修理。">
+  <title>STUDIO S-FORCE | 岡山のリハーサルスタジオ</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Noto+Sans+JP:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+  <style>
+    :root{--ink:#202321;--muted:#69716c;--paper:#f6f6f3;--white:#fff;--line:#e5e8e3;--orange:#ed6b2c;--orange-dark:#cf5420;--soft:#fff0e8;--green:#31483d;--radius:22px;--shadow:0 18px 50px rgba(27,38,31,.09)}
+    *{box-sizing:border-box}html{scroll-behavior:smooth;scroll-padding-top:90px}body{margin:0;background:var(--paper);color:var(--ink);font-family:"DM Sans","Noto Sans JP",sans-serif;line-height:1.75}a{color:inherit;text-decoration:none}img{max-width:100%;display:block}button{font:inherit}
+    .wrap{width:min(1160px,calc(100% - 48px));margin:auto}.eyebrow{font-size:11px;letter-spacing:.18em;font-weight:800;color:var(--orange);text-transform:uppercase}.section{padding:100px 0}.section-head{display:flex;justify-content:space-between;align-items:end;gap:24px;margin-bottom:38px}.section-head h2{font-size:clamp(30px,4vw,46px);line-height:1.2;letter-spacing:-.04em;margin:8px 0 0}.section-head p{max-width:420px;color:var(--muted);font-size:14px;margin:0}
+
+    .page-view{display:none;min-height:55vh;animation:pageFade .22s ease}.page-view.active{display:block}@keyframes pageFade{from{opacity:.35;transform:translateY(5px)}to{opacity:1;transform:translateY(0)}}.nav a[aria-current="page"]{color:var(--orange)}.brand{cursor:pointer}
+    .header{height:82px;position:sticky;top:0;z-index:30;background:rgba(246,246,243,.92);backdrop-filter:blur(16px);border-bottom:1px solid rgba(220,225,219,.8)}.header-inner{height:100%;display:flex;align-items:center;justify-content:space-between;gap:28px}.brand{display:flex;align-items:center;gap:11px;font-weight:900;letter-spacing:.08em;font-size:18px}.brand-mark{display:block;width:142px;height:auto;max-height:48px;object-fit:contain}.footer-logo{width:142px;height:auto;display:block;filter:brightness(0) invert(1)}.brand small{display:block;font-size:9px;color:var(--muted);letter-spacing:.16em;margin-top:-4px}.nav{display:flex;align-items:center;gap:25px;font-size:12px;font-weight:700}.nav a{transition:.2s}.nav a:hover{color:var(--orange)}.nav-cta,.btn{display:inline-flex;align-items:center;justify-content:center;gap:10px;background:var(--orange);color:#fff;padding:13px 20px;border-radius:999px;font-size:12px;font-weight:800;transition:.2s;border:0;cursor:pointer}.nav-cta:hover,.btn:hover{background:var(--orange-dark);transform:translateY(-2px)}.menu-btn{display:none;background:none;border:0;font-size:24px}
+    .hero{padding:38px 0 78px}.hero-grid{display:grid;grid-template-columns:.88fr 1.12fr;gap:52px;align-items:center}.hero-copy{padding:24px 0}.hero h1{font-size:clamp(42px,6vw,72px);line-height:1.13;letter-spacing:-.055em;margin:18px 0 22px;font-weight:900}.hero h1 em{font-style:normal;color:var(--orange)}.hero-copy>p{color:var(--muted);font-size:15px;max-width:440px;line-height:2}.hero-actions{display:flex;gap:12px;flex-wrap:wrap;margin-top:30px}.btn.secondary{background:#fff;color:var(--ink);border:1px solid var(--line)}.btn.secondary:hover{background:#f0f1ed}.hero-note{margin-top:32px;display:flex;gap:20px;color:var(--muted);font-size:11px}.hero-note strong{display:block;color:var(--ink);font-size:17px}.hero-visual{position:relative;min-width:0}.hero-photo{height:510px;width:100%;object-fit:cover;border-radius:30px;box-shadow:var(--shadow)}.hero-chip{position:absolute;left:-28px;bottom:28px;background:white;border-radius:18px;padding:18px 22px;box-shadow:var(--shadow);font-size:11px;color:var(--muted)}.hero-chip strong{display:block;color:var(--ink);font-size:19px}.hero-stamp{position:absolute;right:20px;top:20px;background:var(--orange);color:white;border-radius:50%;width:94px;height:94px;display:grid;place-items:center;text-align:center;font-size:10px;line-height:1.3;font-weight:800;transform:rotate(9deg)}
+    .quick{background:var(--green);color:#fff;padding:24px 0}.quick-inner{display:grid;grid-template-columns:repeat(4,1fr);gap:12px}.quick a{display:flex;align-items:center;justify-content:space-between;padding:8px 18px;border-right:1px solid rgba(255,255,255,.2);font-size:13px;font-weight:700}.quick a:last-child{border:0}.quick span{color:#ffb18a;font-size:18px}
+    .studio-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:18px}.studio-card{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden;transition:.25s}.studio-card:hover{transform:translateY(-5px);box-shadow:var(--shadow)}.studio-card img{height:220px;width:100%;object-fit:cover}.studio-info{padding:20px 21px 22px}.studio-top{display:flex;justify-content:space-between;align-items:center}.studio-top h3{font-size:24px;margin:0;letter-spacing:-.04em}.studio-tag{background:var(--soft);color:var(--orange-dark);padding:5px 10px;border-radius:999px;font-size:10px;font-weight:800}.studio-info p{color:var(--muted);font-size:12px;margin:10px 0 16px}.text-link{font-size:12px;font-weight:800;color:var(--orange-dark)}.text-link span{margin-left:6px}
+    .band{background:#fff}.feature-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}.feature{position:relative;overflow:hidden;min-height:310px;border-radius:24px;background:#e9eae5}.feature img{position:absolute;inset:0;width:100%;height:100%;object-fit:cover;transition:transform .5s}.feature:hover img{transform:scale(1.04)}.feature:after{content:"";position:absolute;inset:0;background:linear-gradient(90deg,rgba(20,28,23,.78),rgba(20,28,23,.08))}.feature-copy{position:relative;z-index:1;padding:32px;color:#fff;max-width:360px}.feature-copy .eyebrow{color:#ffb18a}.feature-copy h3{font-size:28px;line-height:1.25;margin:12px 0}.feature-copy p{font-size:12px;color:rgba(255,255,255,.8);line-height:1.9}.feature-copy a{display:inline-block;margin-top:8px;font-size:12px;font-weight:800;border-bottom:1px solid #ffb18a;padding-bottom:4px}
+    .price-layout{display:grid;grid-template-columns:.8fr 1.2fr;gap:48px;align-items:start}.price-copy h2{font-size:40px;line-height:1.2;margin:10px 0 18px}.price-copy p{color:var(--muted);font-size:13px}.price-list{background:#fff;border:1px solid var(--line);border-radius:20px;overflow:hidden}.price-row{display:grid;grid-template-columns:1fr auto;gap:20px;padding:18px 22px;border-bottom:1px solid var(--line);align-items:center}.price-row:last-child{border:0}.price-row strong{font-size:15px}.price-row small{display:block;color:var(--muted);font-size:11px}.price{font-size:20px;font-weight:900;white-space:nowrap}.price small{display:inline;color:var(--muted);font-size:10px;font-weight:500}.price-foot{font-size:11px;color:var(--muted);margin-top:14px;line-height:1.8}
+    .services{background:#f0f1ed}.service-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:14px}.service-card{background:white;border:1px solid var(--line);border-radius:18px;padding:24px 20px;min-height:190px}.service-icon{width:42px;height:42px;border-radius:13px;background:var(--soft);color:var(--orange);display:grid;place-items:center;font-size:19px;font-weight:900}.service-card h3{font-size:16px;margin:18px 0 6px}.service-card p{font-size:11px;color:var(--muted);line-height:1.8;margin:0}.service-card{min-height:248px;display:flex;flex-direction:column;transition:transform .2s,box-shadow .2s}.service-card-live{border-color:#f0c7b2;box-shadow:0 10px 28px rgba(176,83,38,.07)}.service-card:hover{transform:translateY(-3px);box-shadow:0 14px 30px rgba(28,35,31,.08)}.service-card-top{display:flex;align-items:center;justify-content:space-between;gap:10px}.service-status{font-size:9px;font-weight:900;letter-spacing:.12em;color:#858b85;background:#f1f2ef;border-radius:999px;padding:7px 9px;white-space:nowrap}.service-status.is-live{color:#a84920;background:#fff0e7}.service-card h3{margin-top:17px}.service-action{margin-top:auto;padding-top:18px;display:inline-flex;align-items:center;gap:7px;color:var(--orange-dark);font-size:11px;font-weight:900;text-decoration:none}.service-action.is-disabled{color:#9a9e98;cursor:default}.service-footnote{display:flex;align-items:center;gap:9px;margin-top:18px;color:var(--muted);font-size:11px}.service-footnote-dot{width:7px;height:7px;border-radius:50%;background:var(--orange);display:inline-block}
+    .access-grid{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}.access-card{background:white;padding:30px;border:1px solid var(--line);border-radius:22px}.access-card h3{margin:0 0 16px;font-size:20px}.info-line{padding:12px 0;border-bottom:1px solid var(--line);display:grid;grid-template-columns:90px 1fr;gap:12px;font-size:12px}.info-line:last-child{border:0}.info-line span{color:var(--muted)}.map-panel{min-height:340px;border-radius:24px;background:linear-gradient(135deg,#e5e9e2,#f7eee5);display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;padding:30px}.map-pin{font-size:40px;color:var(--orange)}.map-panel strong{font-size:20px}.map-panel p{color:var(--muted);font-size:12px}.map-panel a{margin-top:12px}
+    .contact{background:var(--orange);color:white;padding:70px 0}.contact-inner{display:flex;align-items:center;justify-content:space-between;gap:30px}.contact h2{font-size:clamp(30px,4vw,44px);line-height:1.2;margin:8px 0}.contact p{font-size:13px;color:rgba(255,255,255,.85)}.contact .eyebrow{color:#ffe0ce}.contact .btn{background:white;color:var(--orange-dark)}.contact .btn:hover{background:#fff1e9}
+    footer{background:#202923;color:#fff;padding:34px 0}.footer-inner{display:flex;justify-content:space-between;align-items:center;gap:20px}.footer-brand{font-weight:900;letter-spacing:.1em}.footer-brand small{display:block;color:#aeb8b0;font-size:10px;font-weight:500;letter-spacing:.05em}.footer-links{display:flex;gap:18px;flex-wrap:wrap;font-size:10px;color:#cbd2cc}.copyright{font-size:10px;color:#9ca79f}
+
+
+    .map-embed{display:block;padding:0;overflow:hidden;min-height:0;background:#fff}.map-embed iframe{display:block;width:100%;height:340px;border:0}.map-caption{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:15px 20px}.map-caption strong{font-size:14px}.map-caption span{font-size:11px;color:var(--muted)}.map-caption .text-link{margin-left:auto}
+    .price-rules{display:grid;gap:9px;margin-top:18px}.price-rule{display:flex;justify-content:space-between;align-items:center;gap:14px;padding:13px 16px;background:#fff;border:1px solid var(--line);border-radius:13px;font-size:12px}.price-rule b{white-space:nowrap}.price-rule span{color:var(--muted);text-align:right}.price-rule strong{color:var(--orange-dark);font-size:15px}
+    .rental-tools{display:grid;gap:14px;margin-bottom:20px}.rental-tools input{width:100%;border:1px solid var(--line);border-radius:14px;padding:14px 17px;background:#fff;font:inherit;font-size:13px;outline:none}.rental-tools input:focus{border-color:var(--orange);box-shadow:0 0 0 3px rgba(237,107,44,.12)}.rental-filters{display:flex;gap:7px;flex-wrap:wrap}.rental-filter{border:1px solid var(--line);background:#fff;color:var(--ink);padding:8px 13px;border-radius:999px;font-size:11px;font-weight:800;cursor:pointer}.rental-filter.active,.rental-filter:hover{background:var(--orange);border-color:var(--orange);color:#fff}.rental-table-wrap{overflow-x:auto;background:#fff;border:1px solid var(--line);border-radius:18px}.rental-table{width:100%;border-collapse:collapse;min-width:650px;font-size:12px}.rental-table th{background:#f0f1ed;text-align:left;color:var(--muted);font-size:10px;letter-spacing:.08em;padding:13px 16px}.rental-table td{padding:13px 16px;border-top:1px solid var(--line);vertical-align:top}.rental-table td:first-child{font-weight:800;color:var(--orange-dark);white-space:nowrap}.rental-table td:nth-child(2){font-weight:700}.rental-table td:nth-child(3){color:var(--muted);font-size:11px}.rental-table td:last-child{text-align:right;font-weight:900;white-space:nowrap;font-size:14px}.rental-empty{padding:28px;text-align:center;color:var(--muted);font-size:13px}.rental-notes{display:grid;grid-template-columns:1.1fr .9fr;gap:18px;margin-top:20px}.rental-notes>div{padding:22px;background:#fff;border:1px solid var(--line);border-radius:18px}.rental-notes strong{font-size:14px}.rental-notes ul{padding-left:18px;margin:12px 0 0;color:var(--muted);font-size:11px;line-height:2}.rental-contact{display:flex;flex-direction:column;align-items:flex-start;justify-content:center;gap:12px;background:var(--soft)!important;border-color:#f4d8c8!important}.rental-contact strong{font-size:18px;line-height:1.5}.rental-contact .btn{margin-top:3px}
+    #equipment-list{scroll-margin-top:100px}.equipment-tabs{display:flex;gap:8px;flex-wrap:wrap;margin:-10px 0 24px}.equip-tab{border:1px solid var(--line);background:#fff;color:var(--ink);padding:9px 15px;border-radius:999px;font-size:11px;font-weight:800;cursor:pointer}.equip-tab.active,.equip-tab:hover{background:var(--orange);border-color:var(--orange);color:#fff}.equipment-grid{display:grid;grid-template-columns:repeat(2,1fr);gap:16px}.equipment-card{background:#fff;border:1px solid var(--line);border-radius:18px;padding:22px;min-width:0}.equipment-card[hidden]{display:none}.equipment-card-head{display:flex;justify-content:space-between;align-items:center;color:var(--orange);font-size:11px;font-weight:900;letter-spacing:.13em}.equipment-card-head b{background:var(--soft);color:var(--orange-dark);padding:5px 10px;border-radius:999px;letter-spacing:0}.equipment-card h3{font-size:19px;margin:12px 0 14px}.equipment-card dl{display:grid;grid-template-columns:112px 1fr;gap:0 14px;margin:0;font-size:11px}.equipment-card dt,.equipment-card dd{padding:10px 0;border-top:1px solid var(--line)}.equipment-card dt{color:var(--muted);font-weight:800}.equipment-card dd{margin:0;line-height:1.8;overflow-wrap:anywhere}.rental-card{background:#fffdfa}
+    @media(max-width:650px){.map-embed iframe{height:280px}.map-caption{align-items:flex-start;flex-direction:column;gap:5px}.map-caption .text-link{margin-left:0;margin-top:5px}.price-rule{align-items:flex-start;flex-direction:column;gap:4px}.price-rule span{text-align:left}.rental-notes{grid-template-columns:1fr}.equipment-grid{grid-template-columns:1fr}.equipment-card{padding:18px}.equipment-card dl{grid-template-columns:92px 1fr}.equipment-tabs{gap:6px}.equip-tab{padding:8px 12px}}
+    .notice{background:#fff8f3;border:1px solid #f4d8c8;color:#76503d;padding:14px 18px;border-radius:14px;font-size:11px;line-height:1.8;margin-top:20px}
+    @media(max-width:900px){.nav{gap:14px}.nav a:not(.nav-cta){display:none}.hero-grid{gap:28px}.hero-photo{height:430px}.service-grid{grid-template-columns:repeat(2,1fr)}}
+    @media(max-width:650px){.wrap{width:min(100% - 32px,560px)}.header{height:68px}.brand{font-size:16px}.menu-btn{display:block}.nav{display:none;position:absolute;left:0;right:0;top:68px;padding:18px 24px 24px;background:var(--paper);border-bottom:1px solid var(--line);flex-direction:column;align-items:stretch}.nav.open{display:flex}.nav a:not(.nav-cta){display:block;padding:7px 0}.nav-cta{margin-top:8px}.hero{padding:22px 0 52px}.hero-grid{grid-template-columns:1fr;gap:28px}.hero-copy{padding:10px 0 0}.hero h1{font-size:46px}.hero-copy>p{font-size:13px}.hero-photo{height:330px;border-radius:22px}.hero-chip{left:12px;bottom:12px;padding:12px 16px}.hero-stamp{width:76px;height:76px;font-size:9px}.hero-note{gap:26px}.quick-inner{grid-template-columns:1fr 1fr;gap:4px}.quick a{padding:8px 10px;border-right:0;font-size:11px}.section{padding:66px 0}.section-head{display:block;margin-bottom:26px}.section-head p{margin-top:14px}.studio-grid{grid-template-columns:1fr 1fr;gap:12px}.studio-card img{height:145px}.studio-info{padding:14px}.studio-top h3{font-size:19px}.studio-tag{font-size:9px}.studio-info p{font-size:10px}.feature-grid{grid-template-columns:1fr}.feature{min-height:270px}.feature-copy{padding:26px}.price-layout{grid-template-columns:1fr;gap:24px}.price-copy h2{font-size:32px}.service-grid{grid-template-columns:1fr 1fr;gap:10px}.service-card{padding:17px 15px;min-height:170px}.service-card h3{font-size:14px}.service-card p{font-size:10px}.access-grid{grid-template-columns:1fr;gap:18px}.access-card{padding:22px}.map-panel{min-height:240px}.contact{padding:52px 0}.contact-inner{display:block}.contact .btn{margin-top:16px}.footer-inner{display:block}.footer-links{margin:16px 0}.copyright{margin-top:18px}}
+    @media(max-width:390px){.studio-grid{grid-template-columns:1fr}.studio-card img{height:190px}.hero h1{font-size:40px}.service-grid{grid-template-columns:1fr}}
+  </style>
+</head>
+<body>
+<header class="header">
+  <div class="wrap header-inner">
+    <a class="brand" href="#home" data-page-link="home" aria-label="STUDIO S-FORCE ホーム"><img class="brand-mark" src="assets/sforce-logo.gif" alt="S-FORCE HIGHEST QUALITY STUDIO"></a>
+    <button class="menu-btn" aria-label="メニューを開く" aria-expanded="false" id="menuBtn">☰</button>
+    <nav class="nav" id="nav">
+      <a href="#home" data-page-link="home">HOME</a>
+      <a href="#studios" data-page-link="studios">STUDIO</a>
+      <a href="#price" data-page-link="price">PRICE</a>
+      <a href="#equipment" data-page-link="equipment">EQUIPMENT</a>
+      <a href="#rental" data-page-link="rental">RENTAL</a>
+      <a href="#home" data-page-link="home" data-scroll-target="services">SERVICE</a>
+      <a href="#access" data-page-link="access">ACCESS</a>
+      <a class="nav-cta" href="tel:0862240012">電話で問い合わせ ↗</a>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <div class="page-view active" data-page-view="home">
+  <section class="hero">
+    <div class="wrap hero-grid">
+      <div class="hero-copy">
+        <div class="eyebrow">岡山の音楽スタジオ · Since 2000s</div>
+        <h1>音を楽しむ、<br><em>場所</em>がある。</h1>
+        <p>バンド練習からレコーディングまで。音にこだわる人たちのための、岡山のリハーサルスタジオ STUDIO S-FORCE。</p>
+        <div class="hero-actions"><a class="btn" href="#studios">スタジオを見る <span>↗</span></a><a class="btn secondary" href="#price">料金を確認する</a></div>
+        <div class="hero-note"><div><strong>6 Rooms</strong>個性の異なるスタジオ</div><div><strong>27台</strong>駐車スペース（旧サイト掲載）</div></div>
+      </div>
+      <div class="hero-visual">
+        <img class="hero-photo" src="assets/R.jpeg" alt="STUDIO S-FORCE スタジオRの室内">
+        <div class="hero-stamp">PLAY<br>LOUD.<br>PLAY FREE.</div>
+        <div class="hero-chip"><strong>YOUR SOUND, YOUR SPACE.</strong>岡山・南方のミュージックスタジオ</div>
+      </div>
+    </div>
+  </section>
+
+  <div class="quick"><div class="wrap quick-inner">
+    <a href="#studios" data-page-link="studios">スタジオ紹介 <span>↗</span></a><a href="#price" data-page-link="price">料金・営業時間 <span>↗</span></a><a href="#equipment" data-page-link="equipment">機材一覧 <span>↗</span></a><a href="#rental" data-page-link="rental">レンタル料金 <span>↗</span></a><a href="#home" data-page-link="home" data-scroll-target="services">サービス <span>↗</span></a><a href="#access" data-page-link="access">アクセス <span>↗</span></a>
+  </div></div>
+
+  <section class="section services" id="services">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">S-FORCE SERVICES</div><h2>音楽を楽しむ、すべてのシーンに。</h2></div><p>スタジオでの練習はもちろん、機材の手配や音づくりまで。S-FORCEが提供するサービスをご紹介します。</p></div>
+      <div class="service-grid">
+        <article class="service-card service-card-live"><div class="service-card-top"><div class="service-icon">⌁</div><span class="service-status is-live">AVAILABLE</span></div><h3>機材レンタル</h3><p>ギター・ベースアンプ、ドラム、PA、マイクなど。必要な機材を必要なシーンへ。</p><a class="service-action" href="#rental" data-page-link="rental">レンタル機材・料金を見る <span>↗</span></a></article>
+        <article class="service-card service-card-soon"><div class="service-card-top"><div class="service-icon">♫</div><span class="service-status">COMING SOON</span></div><h3>レコーディング</h3><p>バンド録音からセルフレコーディング、ミックスまで。サービス内容を準備中です。</p><span class="service-action is-disabled">詳細ページ準備中</span></article>
+        <article class="service-card service-card-soon"><div class="service-card-top"><div class="service-icon">＋</div><span class="service-status">COMING SOON</span></div><h3>楽器修理・調整</h3><p>楽器の状態に合わせたメンテナンスや修理。受付内容を順次公開します。</p><span class="service-action is-disabled">詳細ページ準備中</span></article>
+        <article class="service-card service-card-soon"><div class="service-card-top"><div class="service-icon">✳</div><span class="service-status">COMING SOON</span></div><h3>ギターショップ</h3><p>ギターやエフェクター、周辺アクセサリーなど。取り扱い情報を更新予定です。</p><span class="service-action is-disabled">詳細ページ準備中</span></article>
+      </div>
+      <div class="service-footnote"><span class="service-footnote-dot"></span>サービス情報は順次更新予定です。公開までしばらくお待ちください。</div>
+    </div>
+  </section>
+
+
+  </div>
+  <div class="page-view" data-page-view="studios">
+  <section class="section" id="studios">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Find your room</div><h2>スタジオを選ぶ。</h2></div><p>練習スタイルや人数に合わせて選べる6つのルーム。写真と機材情報を見ながら、使いたいスタジオをチェック。</p></div>
+      <div class="studio-grid">
+        <article class="studio-card"><img src="assets/A.jpeg" alt="スタジオA"><div class="studio-info"><div class="studio-top"><h3>Studio A</h3><span class="studio-tag">8畳</span></div><p>バンド練習に必要な基本機材を揃えたスタンダードルーム。</p><a class="text-link" href="#equipment" data-page-link="equipment" data-room-link="A">機材を見る <span>↗</span></a></div></article>
+        <article class="studio-card"><img src="assets/B.jpeg" alt="スタジオB"><div class="studio-info"><div class="studio-top"><h3>Studio B</h3><span class="studio-tag">8畳</span></div><p>ギターアンプの選択肢も備えた使いやすい練習空間。</p><a class="text-link" href="#equipment" data-page-link="equipment" data-room-link="B">機材を見る <span>↗</span></a></div></article>
+        <article class="studio-card"><img src="assets/C.jpeg" alt="スタジオC"><div class="studio-info"><div class="studio-top"><h3>Studio C</h3><span class="studio-tag">10畳</span></div><p>Marshall、Ampegなどの機材を揃えた中型ルーム。</p><a class="text-link" href="#equipment" data-page-link="equipment" data-room-link="C">機材を見る <span>↗</span></a></div></article>
+        <article class="studio-card"><img src="assets/D.jpeg" alt="スタジオD"><div class="studio-info"><div class="studio-top"><h3>Studio D</h3><span class="studio-tag">10畳</span></div><p>ギター・ベース・ドラムをしっかり鳴らせる空間。</p><a class="text-link" href="#equipment" data-page-link="equipment" data-room-link="D">機材を見る <span>↗</span></a></div></article>
+        <article class="studio-card"><img src="assets/E.jpeg" alt="スタジオE"><div class="studio-info"><div class="studio-top"><h3>Studio E</h3><span class="studio-tag">12畳</span></div><p>ミラールーム。V-Drumsにも対応した多目的ルーム。</p><a class="text-link" href="#equipment" data-page-link="equipment" data-room-link="E">機材を見る <span>↗</span></a></div></article>
+        <article class="studio-card"><img src="assets/R.jpeg" alt="スタジオR"><div class="studio-info"><div class="studio-top"><h3>Studio R</h3><span class="studio-tag">15畳</span></div><p>レコーディング対応。大人数や本格的な演奏にも。</p><a class="text-link" href="#equipment" data-page-link="equipment" data-room-link="R">機材を見る <span>↗</span></a></div></article>
+      </div>
+      <div class="notice">※スタジオの広さ・写真・機材構成は旧サイト掲載情報をもとに仮配置しています。現行の設備・利用条件は公開前に確認してください。</div>
+    </div>
+  </section>
+
+  </div>
+  <div class="page-view" data-page-view="equipment">
+  <section class="section band" id="equipment">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Beyond rehearsal</div><h2>音づくりを、もっと自由に。</h2></div><p>練習だけで終わらない。録る、整える、現場へ持ち出す。S-FORCEのサービスをひとつに。</p></div>
+      <div class="feature-grid">
+        <article class="feature"><img src="assets/ssl_index.jpg" alt="レコーディング機材"><div class="feature-copy"><div class="eyebrow">Recording</div><h3>その音を、<br>作品にする。</h3><p>SSLコンソール、Pro Tools HDなどを使用したレコーディング。セルフ録音からエンジニア対応まで。</p><a href="#home" data-page-link="home" data-scroll-target="services">レコーディングについて ↗</a></div></article>
+        <article class="feature"><img src="assets/banner_work.jpg" alt="楽器メンテナンス"><div class="feature-copy"><div class="eyebrow">Repair & Maintenance</div><h3>楽器のコンディションを、<br>ベストに。</h3><p>ネック調整、フレット、電装系など。楽器の状態に合わせた調整・修理を相談できます。</p><a href="#home" data-page-link="home" data-scroll-target="services">修理・調整について ↗</a></div></article>
+      </div>
+    </div>
+  </section>
+
+
+  <section class="section band" id="equipment-list">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Equipment guide</div><h2>機材を、もっと詳しく。</h2></div><p>各スタジオの常設機材と、レンタル機材をカテゴリ別に整理。部屋を選ぶ前に、使いたいアンプやPAをチェックできます。</p></div>
+      <div class="equipment-tabs" role="group" aria-label="機材一覧の絞り込み">
+        <button class="equip-tab active" data-equip="all">すべて</button>
+        <button class="equip-tab" data-equip="A">Studio A</button>
+        <button class="equip-tab" data-equip="B">Studio B</button>
+        <button class="equip-tab" data-equip="C">Studio C</button>
+        <button class="equip-tab" data-equip="D">Studio D</button>
+        <button class="equip-tab" data-equip="E">Studio E</button>
+        <button class="equip-tab" data-equip="R">Studio R</button>
+        <button class="equip-tab" data-equip="rental">レンタル機材</button>
+      </div>
+      <div class="equipment-grid">
+        <article class="equipment-card" data-room="A"><div class="equipment-card-head"><span>STUDIO A</span><b>8畳</b></div><h3>常設機材</h3><dl>
+          <dt>Guitar Amp</dt><dd>PEAVEY BANDIT 112 ×2<br>PEAVEY 12インチ×4 SP ×1<br>MARSHALL JCM900 ×1</dd>
+          <dt>Bass Amp</dt><dd>PEAVEY FIRE BASS 700 HEAD ×1<br>TNT115S（JBL SP）×1</dd>
+          <dt>Drums</dt><dd>YAMAHA STAGE CUSTOM KIT ×1</dd>
+          <dt>Keyboard</dt><dd>キーボード持込対応（オプション）<br>ROLAND KC300 ×1</dd>
+          <dt>PA / Mic</dt><dd>PHONIC 1062（375W×2）×1<br>YAMAHA SPEAKER ×2<br>SHURE SM58 ×4</dd>
+        </dl></article>
+        <article class="equipment-card" data-room="B"><div class="equipment-card-head"><span>STUDIO B</span><b>8畳</b></div><h3>常設機材</h3><dl>
+          <dt>Guitar Amp</dt><dd>PEAVEY BANDIT 112 ×2<br>MARSHALL 2551（12インチ×4）SP ×1<br>ギターアンプヘッド・オプションあり</dd>
+          <dt>Bass Amp</dt><dd>PEAVEY FIRE BASS 700 HEAD ×1<br>TNT115S（JBL SP）×1</dd>
+          <dt>Drums</dt><dd>YAMAHA STAGE CUSTOM KIT ×1</dd>
+          <dt>Keyboard</dt><dd>キーボード持込対応（オプション）<br>ROLAND KC300 ×1</dd>
+          <dt>PA / Mic</dt><dd>PHONIC 1062（375W×2）×1<br>YAMAHA SPEAKER ×2<br>SHURE SM58 ×4</dd>
+        </dl></article>
+        <article class="equipment-card" data-room="C"><div class="equipment-card-head"><span>STUDIO C</span><b>10畳</b></div><h3>常設機材</h3><dl>
+          <dt>Guitar Amp</dt><dd>MARSHALL JCM2000 DSL100 HEAD ×1<br>MARSHALL 1960A（12インチ×4）SP ×1<br>ROLAND JC-120 ×1</dd>
+          <dt>Bass Amp</dt><dd>AMPEG SVT-3PRO HEAD ×1<br>AMPEG SVT-810E（10インチ×8）×1</dd>
+          <dt>Drums</dt><dd>PEARL VISION / EXPORT CUSTOM KIT ×1</dd>
+          <dt>Keyboard</dt><dd>キーボード持込対応（オプション）<br>ROLAND KC550 ×1</dd>
+          <dt>PA / Mic</dt><dd>MACKIE 1642-VLZ3（24ch）×1<br>YAMAHA &amp; Electro-Voice SPEAKER ×2<br>SHURE SM58 ×4、SM57 ×2</dd>
+        </dl></article>
+        <article class="equipment-card" data-room="D"><div class="equipment-card-head"><span>STUDIO D</span><b>10畳</b></div><h3>常設機材</h3><dl>
+          <dt>Guitar Amp</dt><dd>MARSHALL JCM900 4100 HEAD ×1<br>MARSHALL 1960A SP ×1<br>ROLAND JC-120 ×1</dd>
+          <dt>Bass Amp</dt><dd>HARTKE HA3500 HEAD ×1<br>HARTKE 4.5XL（10インチ×4）×1</dd>
+          <dt>Drums</dt><dd>TAMA IMPERIALSTAR CUSTOM KIT ×1</dd>
+          <dt>Keyboard</dt><dd>キーボード持込対応（オプション）<br>ROLAND KC300 ×1</dd>
+          <dt>PA / Mic</dt><dd>PHONIC POWERPOD 1062 ×1<br>YAMAHA SPEAKER ×2<br>SHURE SM58 ×4</dd>
+        </dl></article>
+        <article class="equipment-card" data-room="E"><div class="equipment-card-head"><span>STUDIO E</span><b>12畳</b></div><h3>常設機材</h3><dl>
+          <dt>Guitar Amp</dt><dd>PEAVEY BANDIT 112 ×1<br>ROLAND JC-55 ×1</dd>
+          <dt>Bass Amp</dt><dd>PEAVEY TNT115S ×1</dd>
+          <dt>Drums</dt><dd>YAMAHA COMPACT DRUM / V-DRUM KIT ×1</dd>
+          <dt>Keyboard</dt><dd>キーボード持込対応（オプション）</dd>
+          <dt>PA / Mic</dt><dd>PHONIC 410 POWERED MIXER ×1<br>YAMAHA COMPACT SPEAKER ×2<br>SHURE SM58 ×2</dd>
+        </dl></article>
+        <article class="equipment-card" data-room="R"><div class="equipment-card-head"><span>STUDIO R</span><b>15畳</b></div><h3>常設機材</h3><dl>
+          <dt>Guitar Amp</dt><dd>MARSHALL JVM410H HEAD ×1<br>MARSHALL 1960A SP ×1<br>ROLAND JC-120 ×1<br>FENDER TWIN REVERB ×1</dd>
+          <dt>Bass Amp</dt><dd>AMPEG SVT-CL / SVT-4PRO HEAD ×1<br>AMPEG SVT-810E（10インチ×8）×1</dd>
+          <dt>Drums</dt><dd>DW COLLECTOR'S / PEARL MASTERS PREMIUM KIT ×1</dd>
+          <dt>Keyboard</dt><dd>ROLAND RD-700 SYNTHESIZER ×1<br>ROLAND KC550 ×1</dd>
+          <dt>PA / Mic</dt><dd>SOUNDCRAFT 24ch CONSOLE ×1<br>JBL HIGH-POWER MAIN SYSTEM ×2<br>STAGE MONITOR SPEAKER ×4<br>SHURE SM58 ×6、SM57 ×4、BETA58A ×2</dd>
+        </dl></article>
+        <article class="equipment-card rental-card" data-room="rental"><div class="equipment-card-head"><span>RENTAL</span><b>貸出機材</b></div><h3>ギター・ベースアンプ</h3><dl>
+          <dt>Guitar Amp Head</dt><dd>Marshall JCM900 Dual Hi-Gain Reverb<br>Marshall JCM2000 TSL100<br>Peavey 5150 II</dd>
+          <dt>Cabinet / Combo</dt><dd>Marshall 1960A / Peavey 5150S<br>Fender Twin Reverb / Hot Rod 410<br>ROLAND JC-120 / Peavey Bandit 112<br>Marshall Valvestate 8040</dd>
+          <dt>Bass Amp</dt><dd>Peavey Fire Bass 700 / Max Bass<br>Mesa Boogie BASS400+<br>Euphonic Audio iAMP800 / MARKBASS F1<br>Ampeg SVT810E / Peavey PRO115<br>Mesa/Boogie R215EV / MARKBASS CL106<br>PEAVEY TNT115S / MARKBASS CMD 151P</dd>
+        </dl></article>
+        <article class="equipment-card rental-card" data-room="rental"><div class="equipment-card-head"><span>RENTAL</span><b>貸出機材</b></div><h3>ドラム・キーボード</h3><dl>
+          <dt>Drums</dt><dd>Ludwig ドラムセット<br>Pearl EXPORT EXR<br>YAMAHA MANU KATCHE Junior Kit<br>Roland V-Drums TD-20X kit<br>ツインペダル、シンバル＋スタンド</dd>
+          <dt>Keyboard</dt><dd>YAMAHA P-120S<br>KAWAI MP9000<br>ROLAND RD-700<br>HAMMOND XK-2</dd>
+          <dt>Keyboard Amp</dt><dd>ROLAND KC500 / KC300 / KC100</dd>
+        </dl></article>
+        <article class="equipment-card rental-card" data-room="rental"><div class="equipment-card-head"><span>RENTAL</span><b>貸出機材</b></div><h3>PA・マイク・周辺機材</h3><dl>
+          <dt>PA / Mixer</dt><dd>CARVIN C1648P（16ch）<br>YAMAHA EMX5000（20ch）<br>YAMAHA EMX3000（12ch）<br>PHONIC XP-2000 Power Amp</dd>
+          <dt>Speaker</dt><dd>YAMAHA S115 IV<br>PEAVEY IMPULSE 1012<br>Peavey ESCORT 簡易PAシステム</dd>
+          <dt>Microphone / DI</dt><dd>SHURE SM57 / SM58 / BETA57<br>EV ND868<br>RODE NT-4<br>Radial JDI / J48</dd>
+          <dt>Accessories</dt><dd>各種スタンド、CANAREマイクケーブル（5m）</dd>
+        </dl></article>
+      </div>
+      <div class="notice">※機材名・構成は提供された旧サイトの掲載情報を整理したものです。現行の設置・在庫・貸出可否は未確認です。レンタル料金は旧サイトの「H24.7月現在」表記が古いため、現行料金として掲載していません。最新の貸出状況・料金はお問い合わせください。</div>
+    </div>
+  </section>
+  </div>
+  <div class="page-view" data-page-view="price">
+  <section class="section" id="price">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Studio price</div><h2>料金を、ひと目で。</h2></div><p>通常利用と個人練習を分けて表示。22:00以降の追加料金も事前に確認できます。</p></div>
+      <div class="price-layout">
+        <div class="price-copy">
+          <div class="eyebrow">3 people or more</div><h2>バンド・グループ利用</h2>
+          <p>3名以上でのご利用はこちら。22:00以降は、スタジオ料金に1時間あたり200円が加算されます。</p>
+          <div class="notice">表示価格は1時間あたり。22:00以降の追加料金は、22:00を過ぎる利用時間に対して適用する想定です。端数時間・予約枠の扱いは運用ルールに合わせて設定してください。</div>
+        </div>
+        <div class="price-list">
+          <div class="price-row"><div><strong>Studio A / B</strong><small>8畳・3人以上</small></div><div class="price">¥2,500<small> / h</small><br><small>22時以降 ¥2,700 / h</small></div></div>
+          <div class="price-row"><div><strong>Studio C / D</strong><small>10畳・3人以上</small></div><div class="price">¥2,900<small> / h</small><br><small>22時以降 ¥3,100 / h</small></div></div>
+          <div class="price-row"><div><strong>Studio E</strong><small>12畳・ミラールーム・3人以上</small></div><div class="price">¥3,300<small> / h</small><br><small>22時以降 ¥3,500 / h</small></div></div>
+          <div class="price-row"><div><strong>Studio R</strong><small>15畳・レコーディング対応・3人以上</small></div><div class="price">¥3,300<small> / h</small><br><small>22時以降 ¥3,500 / h</small></div></div>
+        </div>
+      </div>
+      <div class="price-layout" style="margin-top:34px">
+        <div class="price-copy">
+          <div class="eyebrow">Personal practice</div><h2>個人練習</h2>
+          <p>1名での個人練習料金。全スタジオ共通の料金で、22:00以降は1時間あたり100円加算されます。</p>
+          <div class="notice">個人練習は1スタジオにつき2名まで。旧サイト掲載ルールでは当日予約対象です。最新の予約受付条件は店舗へご確認ください。</div>
+        </div>
+        <div class="price-list">
+          <div class="price-row"><div><strong>全スタジオ共通</strong><small>個人練習・1名</small></div><div class="price">¥900<small> / h</small><br><small>22時以降 ¥1,000 / h</small></div></div>
+          <div class="price-row"><div><strong>学生割引</strong><small>個人練習・会員学生</small></div><div class="price">要確認</div></div>
+        </div>
+      </div>
+      <div class="price-rules">
+        <div class="price-rule"><b>非会員料金</b><span>非会員の方が1名以上含まれる場合、通常料金に <strong>＋500円</strong></span></div>
+        <div class="price-rule"><b>学生割引（団体）</b><span>団体利用料金から <strong>－1,000円</strong></span></div>
+        <div class="price-rule"><b>学生割引（個人）</b><span>個人練習料金から <strong>－200円</strong></span></div>
+      </div>
+      <p class="price-foot">※非会員加算・学生割引と22:00以降の追加料金を併用する場合の計算順や、割引対象条件の詳細は店舗運用に合わせて最終確認してください。</p>
+    </div>
+  </section>
+
+
+
+
+  </div>
+  <div class="page-view" data-page-view="rental">
+  <section class="section" id="rental-prices">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Equipment rental price</div><h2>機材レンタル料金表</h2></div><p>最新のご提供ファイルをもとに、カテゴリ別・検索対応で整理しました。機材名や型番から探せます。</p></div>
+      <div class="rental-tools">
+        <input id="rentalSearch" type="search" placeholder="機材名・メーカー・型番で検索…" aria-label="機材を検索">
+        <div class="rental-filters">
+          <button class="rental-filter active" data-category="all">すべて</button>
+          <button class="rental-filter" data-category="ギターアンプ">ギターアンプ</button>
+          <button class="rental-filter" data-category="ベースアンプ">ベースアンプ</button>
+          <button class="rental-filter" data-category="ドラム">ドラム</button>
+          <button class="rental-filter" data-category="キーボード">キーボード</button>
+          <button class="rental-filter" data-category="PA">PA・スピーカー</button>
+          <button class="rental-filter" data-category="マイク・DI">マイク・DI</button>
+          <button class="rental-filter" data-category="周辺機材">周辺機材</button>
+        </div>
+      </div>
+      <div class="rental-table-wrap">
+        <table class="rental-table">
+          <thead><tr><th>カテゴリ</th><th>機材名・仕様</th><th>備考</th><th>料金</th></tr></thead>
+          <tbody id="rentalRows"></tbody>
+        </table>
+        <div id="rentalEmpty" class="rental-empty" hidden>該当する機材が見つかりませんでした。</div>
+      </div>
+      <div class="rental-notes">
+        <div><strong>レンタルについて</strong><ul>
+          <li>機材の保有数・貸出状況は予約時にご確認ください。</li>
+          <li>「調整中」と記載の機材は、現在の貸出可否を事前にお問い合わせください。</li>
+          <li>機材の受け取り時に、代表者様の身分証明書をご持参ください。</li>
+          <li>岡山市内への配達：片道5,000円／往復10,000円。市外は応相談。</li>
+          <li>機材のセットアップ・PAスタッフ派遣は別途料金です。</li>
+          <li>破損・故障時は状況により修理代金をご請求する場合があります。</li>
+        </ul></div>
+        <div class="rental-contact"><span class="eyebrow">Rental inquiry</span><strong>機材の空き状況・組み合わせも<br>お気軽にご相談ください。</strong><a class="btn" href="tel:0862240012">086-224-0012 に問い合わせ ↗</a></div>
+      </div>
+    </div>
+  </section>
+
+  </div>
+  <div class="page-view" data-page-view="access">
+  <section class="section" id="access">
+    <div class="wrap">
+      <div class="section-head"><div><div class="eyebrow">Visit us</div><h2>アクセス</h2></div><p>岡山市北区南方。車でも公共交通機関でもアクセスできます。</p></div>
+      <div class="access-grid">
+        <div class="access-card">
+          <h3>STUDIO S-FORCE</h3>
+          <div class="info-line"><span>住所</span><strong>〒700-0807<br>岡山市北区南方4-10-41</strong></div>
+          <div class="info-line"><span>電話</span><strong><a href="tel:0862240012">086-224-0012</a></strong></div>
+          <div class="info-line"><span>FAX</span><strong>086-224-0024</strong></div>
+          <div class="info-line"><span>メール</span><strong><a href="mailto:s-force@hotmail.co.jp">s-force@hotmail.co.jp</a></strong></div>
+          <div class="info-line"><span>営業時間</span><strong>平日 15:30～ / 土日祝 12:30～<br><small>終了時間・定休日は要確認</small></strong></div>
+        </div>
+        <div class="map-panel map-embed"><iframe title="STUDIO S-FORCE 周辺地図" src="https://www.google.com/maps?q=岡山市北区南方4-10-41&output=embed" loading="lazy" referrerpolicy="no-referrer-when-downgrade" allowfullscreen></iframe><div class="map-caption"><strong>STUDIO S-FORCE</strong><span>岡山市北区南方4-10-41</span><a class="text-link" href="https://www.google.com/maps/search/?api=1&query=岡山市北区南方4-10-41" target="_blank" rel="noopener">Googleマップで大きく見る ↗</a></div></div>
+      </div>
+      <div class="notice">電話番号・住所・営業時間・アクセス情報は旧サイトから引き継いだ内容です。公開前に最新情報との照合をお願いします。</div>
+    </div>
+  </section>
+
+  </div>
+  <div class="page-view" data-page-view="home">
+  <section class="contact"><div class="wrap contact-inner"><div><div class="eyebrow">Let's make some noise</div><h2>次の音を、ここから。</h2><p>スタジオの空き状況、機材、レコーディングのご相談はこちら。</p></div><a class="btn" href="tel:0862240012">086-224-0012 に電話する ↗</a></div></section>
+  </div>
+</main>
+<footer><div class="wrap footer-inner"><div class="footer-brand"><img class="footer-logo" src="assets/sforce-logo.gif" alt="S-FORCE"></div><div class="footer-links"><a href="#home" data-page-link="home">トップ</a><a href="#studios" data-page-link="studios">スタジオ</a><a href="#price" data-page-link="price">料金</a><a href="#equipment" data-page-link="equipment">機材一覧</a><a href="#rental" data-page-link="rental">レンタル料金</a><a href="#home" data-page-link="home" data-scroll-target="services">サービス</a><a href="#access" data-page-link="access">アクセス</a><a href="mailto:s-force@hotmail.co.jp">お問い合わせ</a></div><div class="copyright">© STUDIO S-FORCE</div></div></footer>
+<script>
+  const menuBtn=document.getElementById('menuBtn');
+  const nav=document.getElementById('nav');
+  menuBtn.addEventListener('click',()=>{const open=nav.classList.toggle('open');menuBtn.setAttribute('aria-expanded',String(open));menuBtn.textContent=open?'×':'☰';});
+  function showPage(page, updateHash=true){
+    const allowed=['home','studios','price','equipment','rental','access'];
+    if(!allowed.includes(page)) page='home';
+    document.querySelectorAll('[data-page-view]').forEach(view=>view.classList.toggle('active',view.dataset.pageView===page));
+    document.querySelectorAll('[data-page-link]').forEach(link=>{
+      if(link.dataset.pageLink===page) link.setAttribute('aria-current','page');
+      else link.removeAttribute('aria-current');
+    });
+    if(updateHash && location.hash!=='#'+page) history.pushState({page},'', '#'+page);
+    window.scrollTo({top:0,behavior:'instant'});
+    nav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');menuBtn.textContent='☰';
+    const names={home:'トップ',studios:'スタジオ紹介',price:'料金',equipment:'機材一覧',rental:'レンタル料金',access:'アクセス'};
+    document.title='STUDIO S-FORCE | '+names[page];
+  }
+  document.querySelectorAll('[data-page-link]').forEach(link=>link.addEventListener('click',e=>{
+    e.preventDefault();
+    showPage(link.dataset.pageLink);
+    if(link.dataset.scrollTarget){
+      const targetId=link.dataset.scrollTarget;
+      window.setTimeout(()=>{
+        const target=document.getElementById(targetId);
+        const header=document.querySelector('.header');
+        if(target){const offset=header ? header.getBoundingClientRect().height + 16 : 16;const top=target.getBoundingClientRect().top + window.scrollY - offset;window.scrollTo({top:Math.max(0,top),behavior:'smooth'});}
+      },260);
+    }
+    if(link.dataset.roomLink){
+      const roomTab=document.querySelector('.equip-tab[data-equip="'+link.dataset.roomLink+'"]');
+      if(roomTab) roomTab.click();
+      const equipmentList=document.getElementById('equipment-list');
+      if(equipmentList){
+        // Wait for the page-view fade/transform to finish before calculating scroll position.
+        window.setTimeout(()=>{
+          const header=document.querySelector('.header');
+          const offset=header ? header.getBoundingClientRect().height + 16 : 16;
+          const top=equipmentList.getBoundingClientRect().top + window.scrollY - offset;
+          window.scrollTo({top:Math.max(0,top),behavior:'smooth'});
+        },260);
+      }
+    }
+  }));
+  window.addEventListener('popstate',()=>showPage(location.hash.slice(1)||'home',false));
+  window.addEventListener('hashchange',()=>showPage(location.hash.slice(1)||'home',false));
+  showPage(location.hash.slice(1)||'home',false);
+  const equipTabs=document.querySelectorAll('.equip-tab');
+  const equipCards=document.querySelectorAll('.equipment-card');
+  equipTabs.forEach(tab=>tab.addEventListener('click',()=>{
+    equipTabs.forEach(t=>t.classList.toggle('active',t===tab));
+    const filter=tab.dataset.equip;
+    equipCards.forEach(card=>{card.hidden=!(filter==='all'||card.dataset.room===filter);});
+  }));
+
+  const rentalItems = [
+    ["ギターアンプ","Marshall JCM900 DUAL HIGAIN REVERB","HEAD / 100W","4,500円"],
+    ["ギターアンプ","Marshall JCM2000 TSL100","HEAD / 100W","4,500円"],
+    ["ギターアンプ","Marshall JVM 410H","HEAD / 100W","4,500円"],
+    ["ギターアンプ","Peavey 5150 II","HEAD / 120W","4,500円"],
+    ["ギターアンプ","Hughes & Kettner Triamp MkII","HEAD / 100W","5,500円"],
+    ["ギターアンプ","Marshall 1960A","CABINET / 16Ω・2台保有","4,500円"],
+    ["ギターアンプ","Peavey 5150S","CABINET / 16Ω・2台保有","4,500円"],
+    ["ギターアンプ","Fender Twin Amp","COMBO / 100W","6,000円"],
+    ["ギターアンプ","Fender Twin Reverb","COMBO / 100W","6,000円"],
+    ["ギターアンプ","ROLAND JC120","COMBO / 120W","4,000円"],
+    ["ギターアンプ","Marshall JCM2000-60W TSL100","COMBO / 調整中","3,000円"],
+    ["ギターアンプ","Fender Hot Rod Deville","COMBO / 60W","5,000円"],
+    ["ギターアンプ","Peavey BANDIT112","COMBO / 80W","3,000円"],
+    ["ギターアンプ","ROLAND AC-60 Acoustic Chorus","30W×2 / 軽量・ギター入力1ch＋マイク入力1ch","4,000円"],
+    ["ギターアンプ","マイク・マイクスタンド・マイクケーブルセット","ROLAND AC-60用オプション","＋1,000円"],
+    ["ベースアンプ","Peavey Fire Bass700","HEAD / 475W","4,000円"],
+    ["ベースアンプ","Mesa Boogie BASS400+","HEAD / 500W","6,000円"],
+    ["ベースアンプ","MARKBASS F1","HEAD / 500W・軽量","5,000円"],
+    ["ベースアンプ","TC ELECTRONIC BH250","HEAD / 250W・軽量","3,000円"],
+    ["ベースアンプ","GALLIEN-KRUEGER MB-500","HEAD / 500W・軽量","4,000円"],
+    ["ベースアンプ","Peavey 810TVX","CABINET / 10インチ×8・400W・4Ω","4,000円"],
+    ["ベースアンプ","Peavey PRO115","CABINET / 15インチ×1・350W・8Ω","3,000円"],
+    ["ベースアンプ","Ampeg SVT810E","CABINET / 10インチ×8・800W・4Ω","5,000円"],
+    ["ベースアンプ","Mesa/Boogie 2X15EV","CABINET / 15インチ×2・800W・4Ω","5,000円"],
+    ["ベースアンプ","MARKBASS CL106","CABINET / 10インチ×6・900W・6Ω・軽量","4,000円"],
+    ["ベースアンプ","MARKBASS NY604","CABINET / 6インチ×4・600W・8Ω・軽量","3,000円"],
+    ["ベースアンプ","Peavey TNT115S","COMBO / 160W・調整中","4,000円"],
+    ["ベースアンプ","EBS MAGNI500-115","COMBO / 250W・軽量","5,000円"],
+    ["ベースアンプ","MARKBASS CMD 151P Jeff Berlin","COMBO / 300W・軽量","6,000円"],
+    ["ベースアンプ","Peavey PRO115 cab 追加","キャビネット追加オプション","3,000円"],
+    ["ドラム","Ludwig（改造品）つや消し黒","BD22 / HT12 / LT13 / FT16 / SD14・A Zildjian HH14/C18×2/R20","10,000円"],
+    ["ドラム","Pearl EXPORT EXR オイスターシェル","BD22 / HT12 / LT13 / FT16 / SD14・A Zildjian HH14/C16/C18/R20","12,000円"],
+    ["ドラム","YAMAHA MANU KATCHE Junior Kit","ミニドラム / BD16 / TT10 / FT13 / SD12・A Zildjian HH12/C16/R20","8,000円"],
+    ["ドラム","Roland V-Drums TD20X","簡易PAシステム付属","12,000円"],
+    ["ドラム","電子ドラム 機材セットアップ","オプション","2,000円"],
+    ["ドラム","ツインペダル","ドラムオプション","2,000円"],
+    ["ドラム","追加シンバル＋スタンド","ドラムオプション","3,000円"],
+    ["キーボード","YAMAHA P-120S","エレピ・各1台保有","3,000円"],
+    ["キーボード","ROLAND RD-700","エレピ・各1台保有","5,000円"],
+    ["キーボード","ROLAND KC500","キーボードアンプ・各1台保有","4,000円"],
+    ["キーボード","ROLAND KC300","キーボードアンプ・各1台保有","3,500円"],
+    ["キーボード","ROLAND KC100","キーボードアンプ・各1台保有","3,000円"],
+    ["PA","YAMAHA EMX5000-20ch","パワードミキサー / 4Ω・500W×2","12,000円"],
+    ["PA","YAMAHA EMX3000-12ch","パワードミキサー / 4Ω・300W×2","6,000円"],
+    ["PA","CARVIN C1648P-16ch","パワードミキサー / 4Ω-500W・8Ω-300W・4ch","6,000円"],
+    ["PA","YAMAHA S115 IV","スピーカー1本 / 8Ω・4台保有","4,000円"],
+    ["PA","Peavey IMPULSE1012","スピーカー1本 / 8Ω・4台保有","4,000円"],
+    ["PA","QSC PLD4.3","パワーアンプ / 625W×4ch・1250W×2ch・2/4/8Ω","8,000円"],
+    ["PA","AMCRON XLS2502","パワーアンプ / 8Ω440W・4Ω775W・2ch","6,000円"],
+    ["PA","Peavey ESCORT","簡易PA / 10インチ2way SP×2・マイク入力7ch・300W×2","6,000円"],
+    ["マイク・DI","SHURE SM57","マイク / 4本保有","1,000円"],
+    ["マイク・DI","SHURE SM58","マイク / 7本保有","1,000円"],
+    ["マイク・DI","EV ND868","バスドラム集音用マイク・1本保有","1,500円"],
+    ["マイク・DI","AUDIX f15","コンデンサーマイク・1本保有","2,000円"],
+    ["マイク・DI","MAXON UH-5","UHFワイヤレスマイク","3,000円"],
+    ["マイク・DI","SAMSON UR-5S","UHF受信機・1組保有","料金記載なし"],
+    ["マイク・DI","Peavey EDB1","DI","1,000円"],
+    ["マイク・DI","Radial PRO DI","PASSIVE DIRECT BOX","1,000円"],
+    ["マイク・DI","Radial JDI","PASSIVE DIRECT BOX","2,000円"],
+    ["周辺機材","アンプ用スタンド","スタンド","1,000円"],
+    ["周辺機材","マイク用スタンド","スタンド","1,000円"],
+    ["周辺機材","キーボード用スタンド","スローン付属無料","1,000円"],
+    ["周辺機材","スピーカー用スタンド","スタンド","1,000円"],
+    ["周辺機材","CANAREマイクケーブル 5～15m","ケーブル","500円"]
+  ];
+  let activeRentalCategory='all';
+  const rentalRows=document.getElementById('rentalRows');
+  const rentalSearch=document.getElementById('rentalSearch');
+  function renderRentalRows(){
+    const q=(rentalSearch.value||'').trim().toLowerCase();
+    const rows=rentalItems.filter(item=>(activeRentalCategory==='all'||item[0]===activeRentalCategory)&&item.join(' ').toLowerCase().includes(q));
+    rentalRows.innerHTML=rows.map(item=>`<tr><td>${item[0]}</td><td>${item[1]}</td><td>${item[2]}</td><td>${item[3]}</td></tr>`).join('');
+    document.getElementById('rentalEmpty').hidden=rows.length!==0;
+  }
+  document.querySelectorAll('.rental-filter').forEach(btn=>btn.addEventListener('click',()=>{
+    activeRentalCategory=btn.dataset.category;
+    document.querySelectorAll('.rental-filter').forEach(b=>b.classList.toggle('active',b===btn));
+    renderRentalRows();
+  }));
+  rentalSearch.addEventListener('input',renderRentalRows);
+  renderRentalRows();
+  
+</script>
+</body>
+</html>
